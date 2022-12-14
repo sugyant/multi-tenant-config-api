@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const tenantConfigController_1 = require("../controller/tenantConfigController");
+const router = (0, express_1.Router)();
+router.post("/", tenantConfigController_1.createTenantConfig);
+router.get("/", tenantConfigController_1.getAllTenantConfig);
+router.get("/:tenantId", tenantConfigController_1.getTenantConfigByTenantId);
+router.put("/:tenantId", tenantConfigController_1.updateTenantConfig);
+router.delete("/:tenantId", tenantConfigController_1.deleteTenantConfig);
+router.delete("/", tenantConfigController_1.deleteTenantConfig);
+router.put("/", tenantConfigController_1.updateTenantConfig);
+exports.default = router;
