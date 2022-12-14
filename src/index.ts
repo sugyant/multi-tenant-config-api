@@ -6,10 +6,12 @@ app.listen(process.env.PORT,  ()=>  console.log(`server Started on port ${proces
 
 // Insert Global DB Tenant Config 1
 const createGlobalConfig = async () => {
+	
 	const DBGLOBALCONFIG = {
-		tenantId: "GLOBAL",
-		configParam: "NZD 1000000"
+		tenantId: process.env.GLOBAL_DB_TENANT_ID,
+		configParam: process.env.GLOBAL_DB_TENANT_PARAM
 	  };
+	
 	try{
 	await Configs.create(DBGLOBALCONFIG);
 	console.log("DB Global Config created: ",DBGLOBALCONFIG);
