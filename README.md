@@ -1,4 +1,4 @@
-# multi-tenant-config-api
+# multi-tenant-config-api  (api developed by : Sugyant Chettri)
 Node.js application using Express and Typescript to support multi-tenancy for configuration entities
 
 
